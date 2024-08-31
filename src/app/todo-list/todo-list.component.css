@@ -1,9 +1,7 @@
 .todo-heading,.task-heading {
   font-family: 'Times New Roman', Times, serif;
 }
-.lables{
-  font-weight: bold;
-}
+
 .todo-container {
   max-width: 800px;
   margin: 0 auto;
