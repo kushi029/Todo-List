@@ -2,7 +2,7 @@
   <h1 class="todo-heading">TODO-LIST</h1>
   <div class="input-container">
     <div class="input-wrapper">
-      <label for="taskName">TASK NAME:</label>
+      <label class="lables" for="taskName">TASK NAME:</label>
       <input pInputText 
       type="text" 
       [(ngModel)]="newTodoTitle" 
@@ -11,7 +11,7 @@
       <div *ngIf="showErrorTitle" class="error">{{ errorMessageTitle }}</div>
     </div>
     <div class="input-wrapper">
-      <label for="dueDate">DUE DATE:</label>
+      <label class="lables" for="dueDate">DUE DATE:</label>
       <p-calendar 
       [(ngModel)]="newTodoDueDate" 
       placeholder="Due date" 
