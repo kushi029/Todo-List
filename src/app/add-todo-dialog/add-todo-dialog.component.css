@@ -48,9 +48,10 @@ p-calendar {
   border: 1px solid red;
 }
 
-.error {
+.error-message {
   color: red;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bold;
   margin-top: 4px;
 }
 
