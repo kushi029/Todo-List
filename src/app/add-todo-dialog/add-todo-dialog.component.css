@@ -14,19 +14,20 @@
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
   margin-bottom: 16px;
+  color: black;
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 25px;
   width: 100%;
 }
 
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
   width:100%
 }
 
@@ -60,8 +61,7 @@ p-calendar {
     width: 100%;
   }
   
-  .add-button, .cancel-button {
-    color: white;
+  add-button, cancel-button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -70,18 +70,8 @@ p-calendar {
     padding: 8px 16px; /* Added padding for better button appearance */
   }
   
-  .add-button {
-    background-color: #007bff;
-  }
-  
-  .add-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .cancel-button {
-    background-color: #6c757d;
-  }
-  
-  .cancel-button:hover {
-    background-color: #5a6268;
+ 
+  .dialog-container {
+    /* Existing styles */
+    animation: popIn 0.3s ease;
   }
