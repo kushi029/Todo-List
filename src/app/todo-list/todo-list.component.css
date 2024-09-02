@@ -121,7 +121,13 @@
   font-size: 14px;
   color: #666;
 }
-
+/* Zero state styling */
+.zero-state {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+}
 
 
 

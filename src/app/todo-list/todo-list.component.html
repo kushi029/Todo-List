@@ -28,8 +28,14 @@
   </div>
 
   <div class="todo-lists">
+    <!-- Open Tasks -->
     <div class="todo-list">
       <h2 class = "task-heading">Open Tasks</h2>
+      <!-- Zero State for Open Tasks -->
+      <div *ngIf="openTodos.length === 0" class="zero-state">
+        <p>No open tasks available. Add a new task to start tracking!</p>
+      </div>
+       <!-- Display Open Tasks -->
       <div *ngFor="let todo of openTodos">
           <p-card>
             <div class="task-item">
@@ -52,8 +58,15 @@
         
     </div>
 
+    <!-- Completed Tasks -->
     <div class="todo-list">
       <h2 class="task-heading">Completed Tasks</h2>
+      <!-- Zero State for Completed Tasks -->
+      <div *ngIf="completedTodos.length === 0" class="zero-state">
+        <p>No completed tasks yet. Complete a task to see it here!</p>
+      </div>
+
+      <!-- Display Completed Tasks -->
       <div *ngFor="let todo of completedTodos">
         <p-card>
           <div class="task-item">
