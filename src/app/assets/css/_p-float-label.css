@@ -25,6 +25,3 @@
   font-weight: bold;
   padding: 0 4px; /* Padding to avoid overlapping with input text */
 }
-.error-border {
-  border: 1px solid red;
-}
