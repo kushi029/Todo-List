@@ -1,0 +1,30 @@
+/* Ensure the label stays at the top when input has a value or when focused */
+.p-float-label input:not(:placeholder-shown) + label,
+.p-float-label input:focus + label {
+  top: -12px; /* Adjust to place the label correctly */
+  left: 0;
+  font-size: 12px; /* Make the label smaller */
+  font-weight: bold;
+  color: #7b8cff; /* Example color */
+  padding: 0 4px; /* Add padding to label */
+  transition: all 0.2s ease;
+}
+
+.p-float-label input[pInputText] {
+  width: 100%;
+  padding: 12px 0 8px; /* Adjust padding to prevent overlap with label */
+  box-sizing: border-box;
+}
+
+.p-float-label label {
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  font-size: 12px; /* Make the label smaller */
+  color: #7b8cff; /* Example color */
+  font-weight: bold;
+  padding: 0 4px; /* Padding to avoid overlapping with input text */
+}
+.error-border {
+  border: 1px solid red;
+}
