@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef,AfterViewChecked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
@@ -21,15 +21,15 @@ import { AddTodoDialogComponent } from '../add-todo-dialog/add-todo-dialog.compo
     CheckboxModule,
     FormsModule,
     ReactiveFormsModule,
-    DynamicDialogModule
+    DynamicDialogModule,
   ],
   providers: [DialogService], // Required to inject DialogService
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss']
 })
-export class TodoListComponent implements OnInit {
-  @ViewChild('newTodoInput') newTodoInput!: ElementRef;
-
+export class TodoListComponent implements OnInit, AfterViewChecked {
+  @ViewChild('todoListContainer') todoListContainer!: ElementRef;
+  
   newTodoTitle: string = '';
   newTodoDueDate: Date | null = null;
   todos: any[] = [];
@@ -47,6 +47,9 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadTodos();
+  }
+  ngAfterViewChecked(): void {
+    this.applyFadeInAnimation();
   }
 
   openAddTodoDialog(): void {
@@ -113,7 +116,14 @@ export class TodoListComponent implements OnInit {
     this.errorMessageDueDate = '';
     this.saveTodos();
   }
-
+  applyFadeInAnimation(): void {
+    const taskItems = this.todoListContainer.nativeElement.querySelectorAll('.task-item');
+    taskItems.forEach((item: HTMLElement) => {
+      if (!item.classList.contains('fade-in')) {
+        item.classList.add('fade-in');
+      }
+    });
+  }
   toggleTodoCompletion(todo: any): void {
     todo.completed = !todo.completed;
     this.saveTodos();

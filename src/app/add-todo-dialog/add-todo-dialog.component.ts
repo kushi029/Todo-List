@@ -8,7 +8,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 @Component({
   selector: 'app-add-todo-dialog',
   standalone: true,
-  imports: [FormsModule,CommonModule,CalendarModule,FloatLabelModule],
+  imports: [FormsModule,CommonModule,CalendarModule,FloatLabelModule,],
   templateUrl: './add-todo-dialog.component.html',
   styleUrls: ['./add-todo-dialog.component.css'],
 })

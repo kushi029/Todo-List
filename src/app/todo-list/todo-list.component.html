@@ -2,9 +2,9 @@
   <h1 class="todo-heading">TODO-LIST</h1>
 
   <!-- Button to open the dialog -->
-  <button pButton label="Add Task" icon="pi pi-plus" class="add-button" (click)="openAddTodoDialog()"></button>
+  <button pButton  label="Add Task" icon="pi pi-plus" class="add-button" (click)="openAddTodoDialog()"></button>
 
-  <div class="todo-lists">
+  <div class="todo-lists" #todoListContainer>
     <div class="todo-list">
       <h2 class="task-heading">Open Tasks</h2>
       <div *ngIf="openTodos.length === 0" class="no-tasks">No open tasks</div>
